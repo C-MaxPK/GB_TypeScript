@@ -9,7 +9,7 @@ export function renderSearchFormBlock (checkInDate: string = checkInDateDefault,
   renderBlock(
     'search-form-block',
     `
-    <form>
+    <form class="searchForm" type="submit">
       <fieldset class="search-filedset">
         <div class="row">
           <div>
