@@ -5,17 +5,17 @@ interface SearchFormData {
   maxPrice: string
 }
 
-const executeSearch = (dataForSearch: SearchFormData) => {
+const executeSearch = (dataForSearch: SearchFormData): void => {
   console.log('Город -', dataForSearch.city);
   console.log('Дата въезда -', dataForSearch.checkInDate);
   console.log('Дата выезда -', dataForSearch.checkOutDate);
   console.log('Макс. цена -', dataForSearch.maxPrice);
 }
 
-export const searchFormHandler = () => {
+export const searchFormHandler = (): void => {
   const searchForm = document.querySelector('.searchForm');
 
-  searchForm.addEventListener('submit', (e) => {
+  searchForm.addEventListener('submit', (e): void => {
     e.preventDefault();
     const city = document.getElementById('city') as HTMLInputElement;
     const checkInDate = document.getElementById('check-in-date') as HTMLInputElement;
