@@ -1,7 +1,9 @@
 import { renderBlock } from './lib.js';
 
 export function renderUserBlock (userName: string, linkToAvatar: string, favoriteItemsAmount?: number): void {
-  if (favoriteItemsAmount < 0) favoriteItemsAmount = 0
+  if (favoriteItemsAmount !== undefined) {
+    if (favoriteItemsAmount < 0) favoriteItemsAmount = 0
+  }
 
   const favoritesCaption = favoriteItemsAmount ? favoriteItemsAmount : 'ничего нет';
   const hasFavoriteItems = favoriteItemsAmount ? true : false;

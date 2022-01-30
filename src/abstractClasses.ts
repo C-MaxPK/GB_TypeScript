@@ -3,7 +3,7 @@
 // От него должны наследоваться класс MyCircle, у него есть свойства: центр окружности и ее радиус, а также должен наследоваться класс MyRectangle с свойствами: ширина и высота, левая верхняя граница, правая нижняя граница
 
 abstract class MyGraphicsPrimitive2D {
-  protected rectangularArea: number[];
+  protected rectangularArea: number[] = [];
   protected abstract movePrimitive(offsetX: number, offsetY: number): void;
 }
 
